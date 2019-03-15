@@ -22,15 +22,49 @@ const card = (data) => {
 
 };
 
-function showmovies (data) {
+const showmovies = (data) => {
   let result = "";
   result = containerRoot.innerHTML += card(data);
-  // console.log(result);
   return result;
-
 }
 
-function showFilter (type){
+const ferched = () =>{
+  for ( i in arrayMoviesSelected) {
+   fetch('http://www.omdbapi.com/?i=' + arrayMoviesSelected[i] + '&apikey=19e49d').then((data) => {
+      return data.json();
+    }).then((dataAsJson) => {
+      console.log(dataAsJson); //muestra todos los objetos  
+    });
+  }
+}
+
+console.log(ferched());
+
+/* for ( i in arrayMoviesSelected) {
+  fetch('http://www.omdbapi.com/?i=' + arrayMoviesSelected[i] + '&apikey=19e49d').then((data) => {
+    return data.json();
+  }).then((dataAsJson) => {
+    if (dataAsJson.Year = 2017);
+      return (dataAsJson)
+    //console.log(dataAsJson);
+    //movies[i]= dataAsJson;
+    //showmovies(dataAsJson);
+    
+  }).then((datafiltered) => {
+    showmovies(datafiltered)
+  });
+}
+ */
+
+
+/* document.getElementById('genere').addEventListener('click', () => {
+  const indexFilter = document.getElementById ('genere');
+  const selectedFilter = indexFilter[indexFilter.selectedIndex].value;
+  const arrayFiltered = window.movies.filterGenere(data, selectedFilter);
+  showmovies(arrayFiltered);
+});  */
+
+/* function showFilter (type){
   let result = "";
   containerRoot.innerHTML = '';
   type.forEach(element => {
@@ -49,7 +83,7 @@ function typeGenere (data){
                   //creo variable donde evalua el cambio del selector.
                   let genere = selectedGenere.value;
                   //creo una variable donde obtiene la funcion de filtrar. donde le estoy mandando mis datos y mi condicion del selector.
-                  let type = window.peliculas.filterGenere(data, genere);
+                  let type = window.movies.filterGenere(data, genere);
 
                   console.log(genere);
 
@@ -57,21 +91,4 @@ function typeGenere (data){
    });
 
 
-}
-
-
-for ( i in arrayMoviesSelected) {
-  fetch('http://www.omdbapi.com/?i=' + arrayMoviesSelected[i] + '&apikey=19e49d').then((data) => {
-    return data.json();
-  }).then((dataAsJson) => {
-    //movies[i]= dataAsJson;
-    showmovies(dataAsJson);
-
-
-
-  });
-}
-
-
-
- //console.log(movies);
+} */

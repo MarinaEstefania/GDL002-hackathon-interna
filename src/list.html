@@ -6,60 +6,60 @@
   <title>Muvies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://bootswatch.com/4/united/bootstrap.min.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="styleCard.css" />
 </head>
 
 <body>
   <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <a class="navbar-brand" href="../src/index.html">muvies</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="../src/list.html">All List <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Bechdel Test</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="../src/index.html">muvies</a>
+     <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../src/list.html">All List <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bechdel Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../src/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
-  <select id="genere" class="genere">
-  <option value="" disabled selected>Genero</option>
-       <option value="Action">Action</option>
-       <option value="Adventure">Adventure</option>
-       <option value="Biography">Biography</option>
-       <option value="Comedy">Comedy</option>
-       <option value="Crime">Crime</option>
-       <option value="Drama">Drama</option>
-       <option value="Family">Family</option>
-      <option value="Fantasy">Fantasy</option>
-      <option value="History">History</option>
-       <option value="Horror">Horror</option>
-        <option value="Mystery">Mystery</option>
-       <option value="Musical">Musical</option>
-       <option value="Romance">Romance</option>
-       <option value="Sci-Fi">Sci-Fi</option>
-       <option value="Thriller">Thriller</option>
 
-       <option value="War">War</option>
+  <select id="genere" class="genere">
+    <option value="" disabled selected>Genero</option>
+    <option value="Action, Adventure, Fantasy, Sci-Fi, War">Action</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Biography">Biography</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Crime">Crime</option>
+    <option value="Drama">Drama</option>
+    <option value="Family">Family</option>
+    <option value="Fantasy">Fantasy</option>
+    <option value="History">History</option>
+    <option value="Horror">Horror</option>
+    <option value="Mystery">Mystery</option>
+    <option value="Musical">Musical</option>
+    <option value="Romance">Romance</option>
+    <option value="Sci-Fi">Sci-Fi</option>
+    <option value="Thriller">Thriller</option>
+    <option value="War">War</option>
   </select>
+
   <section class="containingImg">
-        <span id="img"> </span>
-    </section>
+    <span id="img"> </span>
+  </section>
+
   <footer>
   </footer>
   <script src="data.js"></script> <!-- funcion filtrar  -->
-  
-  <script src="feth.js"></script> 
+  <script src="feth.js"></script>
 </body>
